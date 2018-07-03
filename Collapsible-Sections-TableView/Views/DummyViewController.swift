@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DummyViewController.swift
 //  Collapsible-Sections-TableView
 //
 //  Created by NishiokaKohei on 2018/07/04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DummyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any rebsources that can be recreated.
     }
 
 
