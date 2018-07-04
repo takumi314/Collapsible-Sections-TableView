@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+/*
+ * The Interactor responsible for implementing
+ * the business logic of the module.
+ */
+class DummyInteractor {
+
+    // Url to the desired API.
+    let url = ""
+
+    // Reference to the Presenter's output interface.
+    weak var output: DummyInteractorOutput?
+
+}
+
+///
+/// API(レポジトリ)からInteractorへ
+///
+extension DummyInteractor: DummyInteractorInput {
+
+    // MARK: - DummyInteractorInput
+
+    func fetchDummy() {
+
+        let dummies = (0..<5).map { (i) -> DummyObject in
+            return DummyObject()
+        }
+
+        output?.dummyFetched(dummies)
+    }
+
+}

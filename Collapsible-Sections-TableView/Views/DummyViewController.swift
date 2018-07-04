@@ -8,18 +8,37 @@
 
 import UIKit
 
+
+/*
+ * A view responsible for displaying a list
+ * of articles fetched from some source.
+ */
 class DummyViewController: UIViewController {
+
+    // Reference to the Presenter's interface.
+    var presenter: DummyModuleInterface!
+
+    var dummies: [DummyObject] = [] {
+        didSet {
+
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.presenter.updateView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any rebsources that can be recreated.
-    }
-
 
 }
 
+extension DummyViewController: DummyViewInterface {
+
+    func showArticlesData(dummies: [DummyObject]) {
+        self.dummies = dummies
+    }
+
+    func showNoContentScreen() {
+
+    }
+
+}

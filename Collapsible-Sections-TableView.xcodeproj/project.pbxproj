@@ -15,7 +15,10 @@
 		E1D4ED9E20EBD6E00030EAB7 /* DummyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4ED9D20EBD6DF0030EAB7 /* DummyPresenter.swift */; };
 		E1D4EDA020EBD7010030EAB7 /* DummyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4ED9F20EBD7010030EAB7 /* DummyInteractor.swift */; };
 		E1D4EDA220EBD7280030EAB7 /* DummyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDA120EBD7280030EAB7 /* DummyObject.swift */; };
-		E1D4EDA420EBD73D0030EAB7 /* DummyWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDA320EBD73D0030EAB7 /* DummyWireframe.swift */; };
+		E1D4EDA620EBDD1D0030EAB7 /* RootContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDA520EBDD1D0030EAB7 /* RootContract.swift */; };
+		E1D4EDA820EBDD440030EAB7 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDA720EBDD440030EAB7 /* RootRouter.swift */; };
+		E1D4EDAA20EBDDD70030EAB7 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDA920EBDDD70030EAB7 /* DummyRouter.swift */; };
+		E1D4EDAC20ED19210030EAB7 /* DummyContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4EDAB20ED19210030EAB7 /* DummyContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		E1D4ED9D20EBD6DF0030EAB7 /* DummyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPresenter.swift; sourceTree = "<group>"; };
 		E1D4ED9F20EBD7010030EAB7 /* DummyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyInteractor.swift; sourceTree = "<group>"; };
 		E1D4EDA120EBD7280030EAB7 /* DummyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyObject.swift; sourceTree = "<group>"; };
-		E1D4EDA320EBD73D0030EAB7 /* DummyWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyWireframe.swift; sourceTree = "<group>"; };
+		E1D4EDA520EBDD1D0030EAB7 /* RootContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContract.swift; sourceTree = "<group>"; };
+		E1D4EDA720EBDD440030EAB7 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		E1D4EDA920EBDDD70030EAB7 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
+		E1D4EDAB20ED19210030EAB7 /* DummyContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +68,14 @@
 		E1D4ED8320EBD0000030EAB7 /* Collapsible-Sections-TableView */ = {
 			isa = PBXGroup;
 			children = (
-				E1D4ED9C20EBD68B0030EAB7 /* Others */,
+				E1D4EDAD20ED19290030EAB7 /* Contracts */,
 				E1D4ED9A20EBD6350030EAB7 /* Routers */,
 				E1D4ED9920EBD6280030EAB7 /* Entities */,
 				E1D4ED9820EBD6120030EAB7 /* Interactors */,
 				E1D4ED9720EBD6040030EAB7 /* Presenters */,
 				E1D4ED9620EBD5C70030EAB7 /* Views */,
 				E1D4ED9020EBD0050030EAB7 /* Info.plist */,
+				E1D4ED9C20EBD68B0030EAB7 /* Others */,
 			);
 			path = "Collapsible-Sections-TableView";
 			sourceTree = "<group>";
@@ -109,7 +116,9 @@
 		E1D4ED9A20EBD6350030EAB7 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				E1D4EDA320EBD73D0030EAB7 /* DummyWireframe.swift */,
+				E1D4EDA520EBDD1D0030EAB7 /* RootContract.swift */,
+				E1D4EDA720EBDD440030EAB7 /* RootRouter.swift */,
+				E1D4EDA920EBDDD70030EAB7 /* DummyRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -122,6 +131,15 @@
 				E1D4ED8D20EBD0050030EAB7 /* LaunchScreen.storyboard */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		E1D4EDAD20ED19290030EAB7 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				E1D4EDAB20ED19210030EAB7 /* DummyContract.swift */,
+			);
+			name = Contracts;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D4EDAC20ED19210030EAB7 /* DummyContract.swift in Sources */,
+				E1D4EDA820EBDD440030EAB7 /* RootRouter.swift in Sources */,
 				E1D4ED8720EBD0000030EAB7 /* DummyViewController.swift in Sources */,
 				E1D4ED9E20EBD6E00030EAB7 /* DummyPresenter.swift in Sources */,
 				E1D4EDA220EBD7280030EAB7 /* DummyObject.swift in Sources */,
-				E1D4EDA420EBD73D0030EAB7 /* DummyWireframe.swift in Sources */,
 				E1D4ED8520EBD0000030EAB7 /* AppDelegate.swift in Sources */,
+				E1D4EDA620EBDD1D0030EAB7 /* RootContract.swift in Sources */,
+				E1D4EDAA20EBDDD70030EAB7 /* DummyRouter.swift in Sources */,
 				E1D4EDA020EBD7010030EAB7 /* DummyInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
