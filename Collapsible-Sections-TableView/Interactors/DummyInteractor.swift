@@ -32,7 +32,9 @@ extension DummyInteractor: DummyInteractorInput {
     func fetchDummy() {
 
         let dummies = (0..<5).map { (i) -> DummyObject in
-            return DummyObject()
+            var dummy = DummyObject()
+            dummy.rows = [1, 2, 3]
+            return dummy
         }
 
         output?.dummyFetched(dummies)

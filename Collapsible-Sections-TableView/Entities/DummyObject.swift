@@ -8,6 +8,22 @@
 
 import Foundation
 
-struct DummyObject {
-    
+protocol Countable {
+    var count: Int { get }
 }
+
+protocol Collapable {
+    var isCollapsed: Bool { get set }
+}
+
+struct DummyObject: Countable, Collapable {
+    var count: Int {
+        return rows.count
+    }
+
+    var rows: [Int] = []
+
+    var isCollapsed: Bool = true
+
+}
+

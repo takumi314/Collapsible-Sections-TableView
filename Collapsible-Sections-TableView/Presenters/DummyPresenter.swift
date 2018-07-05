@@ -48,7 +48,7 @@ extension DummyPresenter: DummyModuleInterface {
     }
 
     func updateView() {
-
+        interactor.fetchDummy()
     }
 
     func showDetailsForDummies(_ dummies: DummyObject) {
@@ -66,7 +66,7 @@ extension DummyPresenter: DummyInteractorOutput {
     // MARK: - DummyInteractorOutput
 
     func dummyFetched(_ dummies: [DummyObject]) {
-
+        self.dummies = dummies
     }
 
     func dummyFetchFailed() {
