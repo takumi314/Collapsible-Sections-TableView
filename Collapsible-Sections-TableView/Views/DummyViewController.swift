@@ -83,6 +83,7 @@ extension DummyViewController: UITableViewDelegate, UITableViewDataSource {
 
             header.section = section
             header.titleLabel.text =  "\(section) - section"
+            header.contentView.backgroundColor = .gray
 
             header.setCollapsed(dummies[section].isCollapsed)
             header.delegete = self
@@ -104,7 +105,28 @@ extension DummyViewController: DummyHeaderViewDelegate {
         dummies[section].isCollapsed = !isCollapsed
 
         dummyTableView.beginUpdates()
-        dummyTableView.reloadSections([section], with: .automatic)
+
+        if isCollapsed {
+
+            // セクション点滅を避けるため, セルを逐次追加する
+            for i in 0..<dummies[section].count {
+                dummyTableView.insertRows(at: [IndexPath(row: i, section: section)] , with: .fade)
+            }
+
+            // or `dummyTableView.reloadSections([section], with: .automatic)`
+
+        } else {
+
+            // セクション点滅を避けるため, セルを順に削除する. `.none`だと連続的に一番綺麗✨
+            for i in 0..<dummies[section].count {
+                dummyTableView.deleteRows(at: [IndexPath(row: i, section: section)] , with: .none)
+            }
+
+            // or `dummyTableView.reloadSections([section], with: .automatic)` でもOK
+
+
+        }
         dummyTableView.endUpdates()
+
     }
 }
