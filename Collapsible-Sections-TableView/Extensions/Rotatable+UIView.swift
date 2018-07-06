@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  Rotatable+UIView.swift
 //  Collapsible-Sections-TableView
 //
 //  Created by NishiokaKohei on 2018/07/05.
