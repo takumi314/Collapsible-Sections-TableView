@@ -83,7 +83,7 @@ extension DummyViewController: UITableViewDelegate, UITableViewDataSource {
 
             header.section = section
             header.titleLabel.text =  "\(section) - section"
-            header.contentView.backgroundColor = .gray
+            header.contentView.backgroundColor = .white
 
             header.setCollapsed(dummies[section].isCollapsed)
             header.delegete = self
@@ -101,7 +101,7 @@ extension DummyViewController: DummyHeaderViewDelegate {
     func toggleSection(header: DummyTableViewHeader, section: Int) {
         let isCollapsed = header.isCollapsed
 
-        header.isCollapsed = !isCollapsed
+        header.setCollapsed(!isCollapsed)
         dummies[section].isCollapsed = !isCollapsed
 
         dummyTableView.beginUpdates()

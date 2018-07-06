@@ -9,5 +9,5 @@
 import UIKit
 
 protocol RootWireframe: class {
-    func presentArticlesScreen(in window: UIWindow)
+    func presentDummyScreen(in window: UIWindow)
 }
