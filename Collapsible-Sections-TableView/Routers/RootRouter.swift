@@ -10,7 +10,7 @@ import UIKit
 
 class RootRouter: RootWireframe {
 
-    func presentArticlesScreen(in window: UIWindow) {
+    func presentDummyScreen(in window: UIWindow) {
         window.makeKeyAndVisible()
         window.rootViewController = DummyRouter.assembleModule()
     }
