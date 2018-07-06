@@ -15,7 +15,8 @@ protocol DummyHeaderViewDelegate: class {
 class DummyTableViewHeader: UITableViewHeaderFooterView {
 
     @IBOutlet weak var titleLabel: UILabel!
-
+    @IBOutlet weak var arrowImageView: UIImageView!
+    
     var isCollapsed: Bool = true
 
     var section: Int = 0
@@ -34,6 +35,7 @@ class DummyTableViewHeader: UITableViewHeaderFooterView {
 
     func setCollapsed(_ collopsed: Bool) {
         isCollapsed = collopsed
+        arrowImageView.rotate(at: collopsed ? 0 : .pi, duration: 0.3)
     }
 
 }
