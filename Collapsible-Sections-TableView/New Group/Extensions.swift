@@ -8,6 +8,21 @@
 
 import UIKit
 
-extension UITableView {
-    
+protocol Rotatable {
+    func rotate(at angle: CGFloat, duration: TimeInterval)
 }
+
+extension Rotatable where Self: UIView {
+    
+    func rotate(at angle: CGFloat, duration: TimeInterval = 0.2) {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.toValue = angle
+        animation.duration = duration
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        self.layer.add(animation, forKey: nil)
+    }
+
+}
+
+extension UIView: Rotatable { }
