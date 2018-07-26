@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35353338116AE141CB02830F /* Pods_Collapsible_Sections_TableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5FB15A6F5192CB049FB045 /* Pods_Collapsible_Sections_TableView.framework */; };
 		E1D4ED8520EBD0000030EAB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4ED8420EBD0000030EAB7 /* AppDelegate.swift */; };
 		E1D4ED8720EBD0000030EAB7 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4ED8620EBD0000030EAB7 /* DummyViewController.swift */; };
 		E1D4ED8A20EBD0010030EAB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D4ED8820EBD0010030EAB7 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2716BF73CDB7322CFBBDB53F /* Pods-Collapsible-Sections-TableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collapsible-Sections-TableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Collapsible-Sections-TableView/Pods-Collapsible-Sections-TableView.debug.xcconfig"; sourceTree = "<group>"; };
+		C1ECF413A196F137347615D0 /* Pods-Collapsible-Sections-TableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collapsible-Sections-TableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-Collapsible-Sections-TableView/Pods-Collapsible-Sections-TableView.release.xcconfig"; sourceTree = "<group>"; };
 		E1D4ED8120EBD0000030EAB7 /* Collapsible-Sections-TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Collapsible-Sections-TableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D4ED8420EBD0000030EAB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D4ED8620EBD0000030EAB7 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		E1D4EDB920ED37D10030EAB7 /* DummyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTableView.swift; sourceTree = "<group>"; };
 		E1D4EDBB20ED3E880030EAB7 /* DummyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTableViewHeader.swift; sourceTree = "<group>"; };
 		E1D4EDBF20ED43B20030EAB7 /* DummyTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DummyTableViewHeader.xib; sourceTree = "<group>"; };
+		EB5FB15A6F5192CB049FB045 /* Pods_Collapsible_Sections_TableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collapsible_Sections_TableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35353338116AE141CB02830F /* Pods_Collapsible_Sections_TableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550AED39720D1678DF270CB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2716BF73CDB7322CFBBDB53F /* Pods-Collapsible-Sections-TableView.debug.xcconfig */,
+				C1ECF413A196F137347615D0 /* Pods-Collapsible-Sections-TableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5904639FB7734788539E8688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB5FB15A6F5192CB049FB045 /* Pods_Collapsible_Sections_TableView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1D4ED7820EBD0000030EAB7 = {
 			isa = PBXGroup;
 			children = (
 				E1D4ED8320EBD0000030EAB7 /* Collapsible-Sections-TableView */,
 				E1D4ED8220EBD0000030EAB7 /* Products */,
+				550AED39720D1678DF270CB5 /* Pods */,
+				5904639FB7734788539E8688 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1D4ED9320EBD0050030EAB7 /* Build configuration list for PBXNativeTarget "Collapsible-Sections-TableView" */;
 			buildPhases = (
+				EE3C14CDF8EF2A1C3A301D5D /* [CP] Check Pods Manifest.lock */,
 				E1D4ED7D20EBD0000030EAB7 /* Sources */,
 				E1D4ED7E20EBD0000030EAB7 /* Frameworks */,
 				E1D4ED7F20EBD0000030EAB7 /* Resources */,
+				EFF0096C2AD00FC5B5FCCBB5 /* [CP] Embed Pods Frameworks */,
+				6964F2E8A5FFDC1A0A19A927 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +261,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6964F2E8A5FFDC1A0A19A927 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collapsible-Sections-TableView/Pods-Collapsible-Sections-TableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3C14CDF8EF2A1C3A301D5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Collapsible-Sections-TableView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF0096C2AD00FC5B5FCCBB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Collapsible-Sections-TableView/Pods-Collapsible-Sections-TableView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collapsible-Sections-TableView/Pods-Collapsible-Sections-TableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1D4ED7D20EBD0000030EAB7 /* Sources */ = {
@@ -396,6 +479,7 @@
 		};
 		E1D4ED9420EBD0050030EAB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2716BF73CDB7322CFBBDB53F /* Pods-Collapsible-Sections-TableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -414,6 +498,7 @@
 		};
 		E1D4ED9520EBD0050030EAB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1ECF413A196F137347615D0 /* Pods-Collapsible-Sections-TableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
