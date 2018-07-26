@@ -23,7 +23,7 @@ protocol DummyViewInterface: class {
  * Protocol that defines the commands sent from the View to the Presenter.
  */
 protocol DummyModuleInterface: class {
-    weak var view: DummyViewInterface! { get set }
+    var view: DummyViewInterface? { get set }
     var interactor: DummyInteractorInput! { get set }
     var router: DummyWireframe! { get set }
 
@@ -45,7 +45,7 @@ protocol DummyInteractorOutput: class {
  * Protocol that defines the Interactor's use case.
  */
 protocol DummyInteractorInput: class {
-    weak var output: DummyInteractorOutput? { get set }
+    var output: DummyInteractorOutput? { get set }
 
     func fetchDummy()
 }

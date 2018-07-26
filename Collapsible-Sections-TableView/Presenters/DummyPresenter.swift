@@ -15,7 +15,7 @@ import Foundation
 class DummyPresenter: NSObject {
 
     // Reference to the View (weak to avoid retain cycle).
-    weak var view: DummyViewInterface!
+    weak var view: DummyViewInterface?
 
     // Reference to the Interactor's interface.
     var interactor: DummyInteractorInput!
@@ -26,9 +26,9 @@ class DummyPresenter: NSObject {
     var dummies: [DummyObject] = [] {
         didSet {
             if dummies.count > 0 {
-                view.showArticlesData(dummies: dummies)
+                view?.showArticlesData(dummies: dummies)
             } else {
-                view.showNoContentScreen()
+                view?.showNoContentScreen()
             }
         }
     }
